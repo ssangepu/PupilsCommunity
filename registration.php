@@ -79,7 +79,8 @@ if(isset($_REQUEST['username'])){
     </div>";
 }
 else{
- $query = "INSERT into `users`(name, email, mobileno,username,password)
+    echo "I am calling 3";
+ $query = "INSERT into heroku_0a22cdb987db64a.users (name, email, mobileno,username,password)
             VALUES ('$name','$email','$mobileno','$username','$password')";
  $result =mysqli_query($db_con, $query);
  if ($result){
