@@ -83,13 +83,15 @@ else{
  $query = "INSERT into heroku_0a22cdb987db64a.users (name, email, mobileno,username,password)
             VALUES ('$name','$email','$mobileno','$username','$password')";
  $result =mysqli_query($db_con, $query);
- if ($result){
+ echo "Hello3";
+   { echo "Hello4";
     echo "<div class='form'>
           <h3> Registered successfully</h3><br/>
           <p class='link'><a href='index.php'>Login</a></p>
           </div>";
  }
  else{
+    echo "Hello5";
     echo "<div class='form'>
           <h3>Registration not completed</h3></br>
           <p class='link'><a href='registration.php'>Registration</a></p>
