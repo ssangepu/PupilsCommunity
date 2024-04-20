@@ -84,6 +84,7 @@ else{
             VALUES ('$name','$email','$mobileno','$username','$password')";
  $result =mysqli_query($db_con, $query);
  echo "Hello3";
+ if ($result)
    { echo "Hello4";
     echo "<div class='form'>
           <h3> Registered successfully</h3><br/>
