@@ -24,6 +24,7 @@
 <body>
 <?php
 require('db.php');
+include("user_session.php");
 if(isset($_POST['pickup'])){
  $name = stripslashes($_REQUEST['name']);
  $name = mysqli_real_escape_string($db_con, $name);
@@ -35,10 +36,11 @@ if(isset($_POST['pickup'])){
  $pickupDate = mysqli_real_escape_string($db_con, $pickupDate);
  $flightno = stripslashes($_REQUEST['flightno']);
  $flightno = mysqli_real_escape_string($db_con, $flightno);
+ $username = $_SESSION['username'];
  $additionalInfo = stripslashes($_REQUEST['additionalInfo']);
  $additionalInfo = mysqli_real_escape_string($db_con, $additionalInfo);
- $query = "INSERT into `pickup`(name, email, mobileno, pickupDate, flightno, additionalInfo)
-            VALUES ('$name','$email','$mobileno','$pickupDate','$flightno', '$additionalInfo')";
+ $query = "INSERT into `pickup`(username, name, email, mobileno, pickupDate, flightno, additionalInfo)
+            VALUES ('$username','$name','$email','$mobileno','$pickupDate','$flightno', '$additionalInfo')";
  $result =mysqli_query($db_con, $query);
  if ($result){
     echo "<div class='form'>

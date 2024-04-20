@@ -28,6 +28,7 @@
 <h1 class="login-title">Looking For Accommodation</h1> 
 <?php
     require('db.php');
+    include("user_session.php");
     // When form submitted, insert values into the database.
     $result = mysqli_query($db_con,"SELECT * FROM accommodation where type='looking'");
    

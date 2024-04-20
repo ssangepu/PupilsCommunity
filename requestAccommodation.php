@@ -22,8 +22,9 @@
 </header>
 </head>
 <body>
-<?php
+<?php   
 require('db.php');
+include("user_session.php");
 if(isset($_POST['accommodation'])){
  $name = stripslashes($_REQUEST['name']);
  $name = mysqli_real_escape_string($db_con, $name);
@@ -33,10 +34,11 @@ if(isset($_POST['accommodation'])){
  $startDate = mysqli_real_escape_string($db_con, $startDate);
  $type = stripslashes($_REQUEST['type']);
  $type = mysqli_real_escape_string($db_con, $type);
+ $username = $_SESSION['username'];
  $additionalInfo = stripslashes($_REQUEST['additionalInfo']);
  $additionalInfo = mysqli_real_escape_string($db_con, $additionalInfo);
- $query = "INSERT into `accommodation`(name, mobileno, startDate, type, additionalInfo)
-            VALUES ('$name','$mobileno','$startDate','$type', '$additionalInfo')";
+ $query = "INSERT into `accommodation`(username,name, mobileno, startDate, type, additionalInfo)
+            VALUES ('$username','$name','$mobileno','$startDate','$type', '$additionalInfo')";
  $result =mysqli_query($db_con, $query);
  if ($result){
     echo "<div class='form'>
