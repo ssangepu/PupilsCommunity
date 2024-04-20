@@ -58,6 +58,7 @@
 <?php
 require('db.php');
 if(isset($_REQUEST['username'])){
+ echo "I am calling";
  $name = stripslashes($_REQUEST['name']);
  $name = mysqli_real_escape_string($db_con, $name);
  $email = stripslashes($_REQUEST['email']);
@@ -78,7 +79,7 @@ if(isset($_REQUEST['username'])){
     </div>";
 }
 else{
- $query = "INSERT into `heroku_0a22cdb987db64a.users`(name, email, mobileno,username,password)
+ $query = "INSERT into `users`(name, email, mobileno,username,password)
             VALUES ('$name','$email','$mobileno','$username','$password')";
  $result =mysqli_query($db_con, $query);
  if ($result){
