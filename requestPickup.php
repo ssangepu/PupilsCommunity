@@ -20,6 +20,36 @@
                 
         </div>
     </header>
+    <script>
+        function validation() {
+    
+    var email =
+        document.forms.pickup.email.value;
+    var phone =
+        document.forms.pickup.mobileno.value;
+   
+    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; //Javascript reGex for Email Validation.
+    var regPhone=/^\d{10}$/;									 // Javascript reGex for Phone Number validation.
+
+
+
+    if (email == "" || !regEmail.test(email)) {
+        alert("Please enter a valid e-mail address.");
+        return false;
+        email.focus();
+       
+    }
+    
+   
+    
+    if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        return false;
+        phone.focus();
+    }
+}
+    
+    </script>
 </head>
 <body>
 <?php
@@ -58,12 +88,12 @@ if(isset($_POST['pickup'])){
 else {
 ?>
 <h1 style="font-size:45px;text-align:center;color:#FF0000">Pupils Community</h1>
-    <form class="form" method="post" name="pickup">
+    <form class="form" onsubmit="return validation()" method="post" name="pickup">
         <h1 class="login-title">Pick Up</h1>
         <input type="text" class="login-input" name="name" placeholder="Name" require/>
         <input type="text" class="login-input" name="email" placeholder="Email" require/>
         <input type="text" class="login-input" name="mobileno" placeholder="Mobile No" require/>
-        <input type="datetime-local" class="login-input" name="pickupDate" placeholder="Date" min="2024-03-22" require/>
+        <input type="datetime-local" class="login-input" name="pickupDate" placeholder="Date" min="2024-04-21" require/>
         <input type="text" class="login-input" name="flightno" placeholder="Flight Number" require/>
         <textarea name="additionalInfo" rows="3" cols="65" placeholder="Any additinal information"></textarea>  
         <input type="submit" value="Pick Up" name="pickup" class="login-button"/>

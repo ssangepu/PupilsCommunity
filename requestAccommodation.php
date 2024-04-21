@@ -20,6 +20,26 @@
         
 </div>
 </header>
+<script>
+        function validation() {
+    
+    var phone =
+        document.forms.accommodation.mobileno.value;
+   
+
+    var regPhone=/^\d{10}$/;									 // Javascript reGex for Phone Number validation.
+
+
+    
+   
+    
+    if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        return false;
+        phone.focus();
+    }
+}
+</script>
 </head>
 <body>
 <?php   
@@ -56,7 +76,7 @@ if(isset($_POST['accommodation'])){
 else {
 ?>
 <h1 style="font-size:45px;text-align:center;color:#FF0000">Pupils Commnity</h1>
-    <form class="form" method="post" name="accommodation">
+    <form class="form" onsubmit="return validation()" method="post" name="accommodation">
         <h1 class="login-title">Accommodation</h1>
         <input type="text" class="login-input" name="name" placeholder="Name" require/>
         <input type="text" class="login-input" name="mobileno" placeholder="Mobile No" require/>
