@@ -39,6 +39,7 @@
         phone.focus();
     }
 }
+
 </script>
 </head>
 <body>
@@ -80,7 +81,7 @@ else {
         <h1 class="login-title">Accommodation</h1>
         <input type="text" class="login-input" name="name" placeholder="Name" require/>
         <input type="text" class="login-input" name="mobileno" placeholder="Mobile No" require/>
-        <input type="date" class="login-input" name="startDate" placeholder="Date" require/>
+        <input type="date" class="login-input" name="startDate" placeholder="Date" min="2024-04-25" required/>
         <input type="radio" id="type" name="type" value="Available"><label for="Available">Available</label>
         <input type="radio" id="type" name="type" value="Looking"><label for="Looking">Looking</label>
         <textarea name="additionalInfo" rows="3" cols="65" placeholder="Any additinal information"></textarea>  

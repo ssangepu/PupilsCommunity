@@ -93,7 +93,7 @@ else {
         <input type="text" class="login-input" name="name" placeholder="Name" require/>
         <input type="text" class="login-input" name="email" placeholder="Email" require/>
         <input type="text" class="login-input" name="mobileno" placeholder="Mobile No" require/>
-        <input type="datetime-local" class="login-input" name="pickupDate" placeholder="Date" min="2024-04-21" require/>
+        <input type="datetime-local" class="login-input" name="pickupDate" placeholder="Date" min="2024-04-25T00:00:00" require/>
         <input type="text" class="login-input" name="flightno" placeholder="Flight Number" require/>
         <textarea name="additionalInfo" rows="3" cols="65" placeholder="Any additinal information"></textarea>  
         <input type="submit" value="Pick Up" name="pickup" class="login-button"/>
