@@ -9,10 +9,11 @@
     <div class="container">
     <nav>
         <ul>
-        <li><a href="accommodation.php">Accommodation</a>&nbsp;&nbsp;</li>
-            <li><a href="marketplace.php">Marketplace</a>&nbsp;&nbsp;</li>
-            <li><a href="my_items.php">My Items</a>&nbsp;&nbsp;</li>
+        <li><a href="user_home.php">Home</a>&nbsp;&nbsp;</li>
+            <li><a href="accommodation.php">Accommodation</a>&nbsp;&nbsp;</li>
             <li><a href="pickup.php">Pickup</a>&nbsp;&nbsp;</li>
+            <li><a href="posts.php">Posts</a>&nbsp;&nbsp;</li>
+            <li><a href="my_items.php">My Items</a>&nbsp;&nbsp;</li>
             <li><a href="logout.php">Logout</a>&nbsp;&nbsp;</li>
         </ul>
     </nav>
